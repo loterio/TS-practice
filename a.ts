@@ -13,13 +13,22 @@ function getData():number[]{
     let dataInp_val = parseInt(
         (<HTMLInputElement>document.getElementById("validos")).value);
     
-    return new Array(dataInp_ele,dataInp_bra,dataInp_nul,dataInp_val);
+    let data:number[] = [dataInp_ele,dataInp_bra,dataInp_nul,dataInp_val];
+
+    // document.getElementById('results').innerHTML = "Votantes:",String(dataInp_ele);
+    return data;
 } 
 
-function showArray(data: number[]):void{
-    data.forEach(value => {
-        console.log(value);
-    });
+function showResults():void{
+    let data:number[] = getData();
+        let perc_br: number = (data[1]*100)/data[0]; 
+        let perc_nl: number = (data[2]*100)/data[0];
+        let perc_vl: number = (data[3]*100)/data[0];
+         
+    alert(`total: ${data[0]} \n 
+        brancos: ${data[1]} (${perc_br}%) \n 
+        nulos: ${data[2]} (${perc_nl}%) \n 
+        válidos: ${data[3]} (${perc_vl}%) \n`);
 }
 
 // - - - 
