@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercices</title>
+</head>
+<body>
+    <a href="../index.htm">back to menu</a>
+    <h3>
+        #1 Escreva um algoritmo para ler o número total de eleitores
+        de um município, o número de votos brancos, nulos e
+        válidos. Calcular e escrever o percentual que cada um
+        representa em relação ao total de eleitores.
+    </h3>
+
+    <form method="post">
+        <input placeholder="total" type="text" name="eleitores" id="eleitores">
+        <input placeholder="brancos" type="text" name="brancos" id="brancos">
+        <input placeholder="nulos" type="text" name="nulos" id="nulos">
+        <input placeholder="válidos" type="text" name="validos" id="validos">
+        <input type="submit" value="calculate" onclick="showResults()">
+    </form>
+    <div id="results"></div>
+<script src="../dist/a.js"></script>
+</body>
+</html>
